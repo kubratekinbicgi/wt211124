@@ -2,15 +2,14 @@ body{
   margin: 0;
   padding: 0;
 }
-
-.header{
-  color: white;
-  text-align: center;
-  background-image:url(./public/assets/iteration-1/home-banner.png) ;
-  width: 1920px;
-  height: 1080px;
-  gap: 10px;
+header{
+  width: 100%;
+  height: 100vh;
+  background: center / contain no-repeat url("./public/assets/iteration-1/home-banner.png");
+  background-size: auto;
+  margin: 0;
 }
+
 .head{
   font-weight: bold;
   display: flex;
@@ -18,8 +17,16 @@ body{
   align-items: flex-start;
    margin-top: 40px;
    padding: 50px;
-   font-family: "Roboto Condensed" , sans-serif;
-   font-size: 4rem;
+   font-family: "Londrina Solid" , sans-serif;
+   font-size: 3rem;
+   color: white;
+   margin-bottom: 0px;
+}
+
+.head-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .head-text{
@@ -27,22 +34,33 @@ body{
   font-family: "Satisfy" , cursive;
   padding: 0;
   margin: 0;
-  
+  text-align: center;
+  font-size: 2rem;
 }
 .wrapped-text{
+  margin-top: 0px;
   padding: 0;
   margin-bottom: 20px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 200;
   font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button{
   text-decoration: none;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: #FDC913;
-  padding: 10px 40px;
+  padding: 10px 40px ;
   margin: 0;
+  font-family: "Barlow";
 }
+
 .categories{
   display: flex;
   justify-content: space-between;
@@ -60,26 +78,165 @@ body{
     padding: 5px 5px; 
     margin: 8px 0;
 }
-.special-menu{
+
+.special-menu {
+  display: grid;
   width: 1,072px;
   height: 449px;
   top: 1242px;
   left: 424px;
   gap: 11px;
-  display: flex;
-  border-radius: 10px;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  opacity: 0px;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "Quattrocento";
 }
 
 .special-head {
-  flex: 1 1 100%; /* Başlık genişliği tam olur */
-  text-align: left;
+  background-image: url("./public/assets/iteration-2/cta/kart-1.png");
+  grid-column: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-radius: 12px;
+  width: 531px;
+  height: 455px;
+  gap: 0px;
+  opacity: 0px;
+  margin-left: 424px
+}
+
+.special-item1 {
+  background-image: url("./public/assets/iteration-2/cta/kart-2.png");
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 12px;
+  margin-right: 424px;
+  width: 530px;
+  height: 190px;
+  padding: 32px 0px 0px 0px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.special-item2 {
+  background-image: url("./public/assets/iteration-2/cta/kart-3.png");
+  grid-column: 2;
+  grid-row: 2;
+  border-radius: 12px;
+  margin-right: 424px;
+  width: 530px;
+  height: 190px;
+  padding: 32px 0px 0px 0px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+footer {
+  background: #1A1A1A;
+  width:100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 67rem;
+  margin: 0 auto;
   color: white;
-  background-image: url(./public/assets/iteration-2/cta/kart-1.png);
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  padding: 2rem 0;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+}
+
+.info img {
+  width: 1.5rem;
+  height: 1.5rem;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.head-logo {
+  font-family: Londrina Solid;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: left;
+}
+
+.info p {
+  font-family: Barlow;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: left;
+}
+
+.footer-middle {  
+  width: 33%;
+}
+.footer-middle h1 {
+  font-family: Barlow;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  text-align: left;
+}
+
+.footer-middle p {
+  font-family: Barlow;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: left;
+}
+
+
+.instagram-gallery {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.instagram-gallery .instagram-posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+} 
+
+.instagram-gallery h1 {
+  font-family: Barlow;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  text-align: left;
+}
+
+.footer-bottomblock{
+  max-width: 67rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.orijinal p {
+  color:white;
+  font-family: Barlow;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-align: left;
 }
